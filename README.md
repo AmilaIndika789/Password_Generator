@@ -1,6 +1,6 @@
 # Password Generator
 
-A symbol password generator implemented using Python.
+A password generator implemented using Python.
 
 ## Instructions
 
