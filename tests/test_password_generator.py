@@ -8,7 +8,7 @@ def test_get_user_input():
     with mock.patch.object(builtins, "input", lambda _: "3"):
         character_count = get_user_input("Enter character count: ")
         assert character_count == 3
-        assert type(character_count) == int
+        assert isinstance(character_count, int)
 
 
 @pytest.fixture
@@ -31,7 +31,7 @@ def test_shuffle_characters():
     characters = list("afa2!#$%jl78")
     shuffled = shuffle_characters(characters)
     assert len(shuffled) == len(characters)
-    assert type(shuffled) == list
+    assert isinstance(shuffled, list)
     for character in shuffled:
         assert character in characters
 
