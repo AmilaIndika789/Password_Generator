@@ -42,3 +42,26 @@ def test_join_characters():
     joined_string = join_characters(characters)
     assert joined_string == original_string
 
+
+def test_generate_secure_password(get_character_counts):
+    letter_count = get_character_counts["letters_count"]
+    symbol_count = get_character_counts["symbols_count"]
+    number_count = get_character_counts["numbers_count"]
+
+    generated_password = generate_secure_password(letter_count, symbol_count, number_count, letters, symbols, numbers)
+
+    letter_count_in_password = 0
+    symbol_count_in_password = 0
+    number_count_in_password = 0
+    for character in generated_password:
+        if character in letters:
+            letter_count_in_password += 1
+        if character in symbols:
+            symbol_count_in_password += 1
+        if character in numbers:
+            number_count_in_password += 1
+
+    assert letter_count_in_password == letter_count
+    assert symbol_count_in_password == symbol_count
+    assert number_count_in_password == number_count
+    assert len(generated_password) == letter_count + symbol_count + number_count
