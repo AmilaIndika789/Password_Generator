@@ -46,8 +46,8 @@ def generate_secure_password(
 def main():
     print("Welcome to the Password Generator!")
     letters_count = get_user_input("How many letters would you like in your password?\n")
-    symbols_count = get_user_input(f"How many symbols would you like?\n")
-    numbers_count = get_user_input(f"How many numbers would you like?\n")
+    symbols_count = get_user_input("How many symbols would you like?\n")
+    numbers_count = get_user_input("How many numbers would you like?\n")
 
     secure_password = generate_secure_password(letters_count, symbols_count, numbers_count, letters, symbols, numbers)
 
