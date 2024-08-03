@@ -25,3 +25,7 @@ A password generator implemented using Python.
    ~~~zsh
    coverage run --source src.pkg -m pytest -vv tests && coverage report --show-missing
    ~~~
+
+## Usage
+
+![Example usage of password generator](images/password_generator_usage.png)
